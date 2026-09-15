@@ -212,12 +212,37 @@ h1 {
   background: #000;
 }
 
-.viewer figcaption {
+.viewer-meta {
+  width: 100%;
+  min-height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.viewer figcaption,
+.viewer-download {
   min-height: 12px;
+  color: var(--ink);
   font-size: 10px;
   letter-spacing: .14em;
   text-align: center;
   text-transform: uppercase;
+}
+
+.viewer-download {
+  color: var(--muted);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: #444;
+  text-underline-offset: 4px;
+}
+
+.viewer-download:hover,
+.viewer-download:focus-visible {
+  color: #fff;
+  text-decoration-color: #fff;
 }
 
 .viewer-close,
@@ -293,7 +318,10 @@ footer {
   }
 
   .viewer figure { gap: 13px; }
-  .viewer figcaption { padding-inline: 58px; }
+  .viewer-meta {
+    padding-inline: 48px;
+    gap: 12px;
+  }
   .viewer-arrow { width: 42px; }
 
   footer {

@@ -6,6 +6,7 @@
   const viewer = document.querySelector('#viewer');
   const viewerVideo = document.querySelector('#viewer-video');
   const viewerCaption = document.querySelector('#viewer-caption');
+  const viewerDownload = document.querySelector('#viewer-download');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let currentIndex = 0;
 
@@ -74,6 +75,8 @@
     viewerVideo.poster = item.poster;
     viewerVideo.src = item.video;
     viewerCaption.textContent = item.title;
+    viewerDownload.href = item.video;
+    viewerDownload.download = `${item.id}.mp4`;
     viewerVideo.load();
     viewerVideo.play().catch(() => {});
   }

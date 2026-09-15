@@ -27,14 +27,17 @@
     <button class="viewer-arrow viewer-prev" id="viewer-prev" type="button" aria-label="Previous piece">&#8592;</button>
     <figure>
       <video id="viewer-video" muted loop playsinline controls></video>
-      <figcaption id="viewer-caption"></figcaption>
+      <div class="viewer-meta">
+        <figcaption id="viewer-caption"></figcaption>
+        <a class="viewer-download" id="viewer-download" download>Download MP4</a>
+      </div>
     </figure>
     <button class="viewer-arrow viewer-next" id="viewer-next" type="button" aria-label="Next piece">&#8594;</button>
   </dialog>
 
   <footer>
-    <span>Made with VISUAL SYNTH</span>
-    <span>Generative video / 2026</span>
+    <span>Personal use + sharing welcome with credit</span>
+    <span>Commercial use by permission · Made with VISUAL SYNTH</span>
   </footer>
 
   <script src="gallery-data.js"></script>
