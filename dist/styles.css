@@ -296,6 +296,18 @@ footer {
   text-transform: uppercase;
 }
 
+footer a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: #343434;
+  text-underline-offset: 3px;
+}
+
+footer a:hover,
+footer a:focus-visible {
+  color: #aaa;
+}
+
 @media (max-width: 640px) {
   :root { --gap: 2px; }
 
